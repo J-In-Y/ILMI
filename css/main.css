@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+
+/* banner */
+.banner .banner1 {position: relative; background: url(../images/main/visual_01.jpg) no-repeat center / cover; height: 900px; }
+.banner .banner2 {position: relative; background: url(../images/main/visual_02.jpg) no-repeat center / cover; height: 900px; }
+
+
+#main .banner_txt { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 100%; padding: 0 10vw; color: #fff;}
+#main .banner_txt h3 { font-size: 10rem; font-weight: 300;}
+#main .banner_txt p { font-size: 2.5rem; margin-top: 30px}
+
+/* banner버튼 */
+.banner .control { position: absolute; left: 10vw; width: 100%; bottom: 80px; display: flex; justify-content: left; gap: 20px; z-index: 20; align-items: center; }
+.banner .swiper-button-prev { margin-top: 0; color: transparent; position: static; width: 34px; height: 13px; background: url(../images/main/prev_w.png); }
+.banner .swiper-button-next {margin-top: 0; color: transparent; position: static; width: 34px; height: 13px; background: url(../images/main/next_w.png);}
+.banner .pause { font-size: 0; cursor: pointer; width: 20px; height: 20px; background: url(../images/main/btn_puase.png);}
+.banner .play {display: none; font-size: 0; cursor: pointer; width: 20px; height: 20px; background: url(../images/main/btn_play.png);}
+
+
+@media (max-width:1200px) {
+    .banner .banner1 { height: 800px;}
+    .banner .banner2 { height: 800px;}
+
+    #main .banner_txt h3 { font-size: 7rem; }
+    #main .banner_txt p { font-size: 2rem; margin-top: 20px}
+}
+@media (max-width:800px) {
+    .banner .banner1 { height: 700px;}
+    .banner .banner2 { height: 700px;}
+
+    #main .banner_txt h3 { font-size: 4rem; }
+    #main .banner_txt p { font-size: 1.6rem;}
+}
+
+/* 공통 */
+h2 {display: inline-block; padding: 20px 20px 0; font-size: 2.5rem; color: var(--main-color); border-top: 2px solid var(--main-color); border-radius: 50%; font-weight: 400;}
+h2 + p { font-size: 4rem; padding: 20px 0 50px;}
+.btn_more a {padding: 0 25px 0 0; background: url(../images/main/more.png) no-repeat right center; font-size: 1.8rem;}
+
+@media (max-width: 1024px) {
+  h2 { font-size: 2rem;}
+  h2 + p { font-size: 3rem;}
+}
+@media (max-width: 780px) {
+  h2 { font-size: 1.6rem;}
+  h2 + p { font-size: 2.5rem; padding: 20px 0 30px;}
+  .btn_more a { font-size: 1.4rem;}
+}
+
+
+
+/* best */
+.best { padding: 150px 0; background: url(../images/main/best_bg.png) no-repeat center / cover; text-align: center; }
+
+.best .best_list {padding-bottom: 50px;}
+.best .best_list p {font-size: 2.5rem; padding: 40px 0 20px;}
+.best .best_list img { width: 100%; transition: all 0.5s;}
+
+.best .swiper-slide { transform: scale(0.8); position: relative;}
+.best .swiper-slide.swiper-slide-active { transition: all 0.5s; transform: scale(1); }/* 띄어쓰기!!!!!! */
+.best .best_list img:last-child { position: absolute; left: 0; top: 0; opacity: 0;}
+
+.best .swiper-slide:hover img:first-child { opacity: 0; }
+.best .swiper-slide:hover img:last-child { opacity: 1; }
+
+.best .swiper-scrollbar { width: 70%; left: 50%; transform: translateX(-50%); bottom: 0; top: auto; height: 2px; background: #eee;  }
+.best .swiper-scrollbar-drag {
+  background: var(--main-color); /* 스크롤바 드래그 부분 색상 */
+}
+
+@media (max-width: 780px) {
+  .best { padding: 100px 0;}
+  }
+
+/* story */
+.story {height: 600px; background: url(../images/main/brand_bg.jpg) no-repeat center / cover; color: #fff; display: flex; text-align: center; text-align: left; align-items: center;}
+.story .inner { max-width: 1300px;}
+.story .story_txt2 {display: flex; gap: 150px; }
+.story .btn_more a { background: url(../images/main/more.w.png) no-repeat right center;}
+
+@media (max-width: 1024px) {
+  .story { text-align: center; height: 500px;}
+  .story .story_txt2 { flex-direction: column-reverse; gap: 30px;}
+}
+
+/* new */
+.new { background: #fffbeb; text-align: center; background: #fffbeb; padding: 150px 0;}
+.new .new_list { display: grid; grid-template-columns: 30% auto; gap: 30px;}
+.new .new_button { text-align: left;}
+.new .new_button button { padding: 15px 25px; background: #f4e7d0; font-size: 2rem; cursor: pointer; border-radius: 50px; display: inline-block;  margin: 5px; white-space: nowrap; color: #333;}
+
+.new .new_button button.active { background: var(--main-color); color: #fff;}
+
+.new .new_img img { width: 100%; border-radius: 50px;}
+.new .new_img a:not(:first-child) { display: none;}
+
+@media (max-width: 1400px) {
+  .new .new_button button { padding: 10px 20px; font-size: 1.8rem;}
+  }
+@media (max-width: 1100px) {
+  .new { padding: 100px 0;}
+  .new .new_list {grid-template-columns: 1fr; gap: 30px;}
+  .new .new_button button { padding: 10px 20px; font-size: 1.6rem;}
+}
+@media (max-width: 700px) {
+  .new .new_button button {padding: 7px 15px; font-size: 1.4rem;}
+}
+
